@@ -7,10 +7,12 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function App() {
   const [todos, setTodos] = useState([])
+  console.log(todos, "todos todos todfos")
+
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://192.168.56.1:3000/todos/1")
+      const response = await fetch("http://192.168.56.1:3000/todos/2")
       console.log(response, 121213123412312)
       const data = await response.json()
       setTodos(data)

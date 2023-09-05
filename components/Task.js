@@ -36,6 +36,11 @@ const ChechMark = ({ id, completed, toggleTodo }) => {
 }
 
 const Task = ({ title, id, completed, shared_with_id, toggleTodo, clearTodo }) => {
+
+
+    console.log(completed, 890890813123123123)
+
+
     const [isDeleteActive, setIsDeleteActive] = useState(false);
     const bottomSheetModalRef = useRef(null);
     const sharedBottomSheetRef = useRef(null);
@@ -99,8 +104,7 @@ const Task = ({ title, id, completed, shared_with_id, toggleTodo, clearTodo }) =
                     id={id}
                     title={title}
                     shared_with_id={shared_with_id}
-                    complete={completed} />
-                <TodoModalContent />
+                    completed={completed} />
             </BottomSheetModal>
             <BottomSheetModal
                 ref={bottomSheetModalRef}
